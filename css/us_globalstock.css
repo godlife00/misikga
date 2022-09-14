@@ -3772,13 +3772,19 @@ body.globalStock {
 
 @media (min-width:320px) and (max-width:767px){
     .adsbygoogle_banner.v_mobile.topCenter {                
-        background-color: red;        
+        background-color: #f4f4f5;        
         display: block;                
     }
-    .adsbygoogle_banner.v_mobile.btmCenter {                
-        background-color: red;        
+    .adsbygoogle_banner.v_mobile.midCenter {                
+        background-color: #f4f4f5;        
         display: block;              
         margin-top: 15px;  
+    }
+    .adsbygoogle_banner.v_mobile.btmCenter {                
+        background-color: #f4f4f5;        
+        display: block;              
+        margin-top: 15px;  
+        max-height: 180px;
     }
 }
 @media (min-width:768px) and (max-width:1023px) {
@@ -3790,14 +3796,14 @@ body.globalStock {
         max-width: 320px;
         width: 100%;
         height: 87px;
-        background-color: blue;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.midLeft {                
         display: inline-block;        
         max-width: 320px;
         width: 100%;
         height: 90px;
-        background-color: blue;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.midCenter {                
         display: block;        
@@ -3805,7 +3811,7 @@ body.globalStock {
         margin-top: 15px;
         width: 100%;
         height: 90px;
-        background-color: blue;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.btmCenter {                
         display: block;        
@@ -3813,7 +3819,7 @@ body.globalStock {
         margin-top: 15px;
         width: 100%;
         height: 280px;
-        background-color: blue;
+        background-color: #f4f4f5;        
     }
     
 }
@@ -3826,14 +3832,14 @@ body.globalStock {
         max-width: 520px;
         width: 100%;
         height: 87px;
-        background-color: blanchedalmond;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.midLeft {                
         display: inline-block;        
         max-width: 520px;
         width: 100%;
         height: 90px;        
-        background-color: blanchedalmond;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.midCenter {                
         display: block;        
@@ -3841,7 +3847,7 @@ body.globalStock {
         width: 100%;
         height: 90px;
         margin-top: 15px;
-        background-color: blanchedalmond;
+        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.btmCenter {                
         display: block;        
@@ -3849,7 +3855,7 @@ body.globalStock {
         margin-top: 15px;
         width: 100%;
         height: 280px;
-        background-color: blanchedalmond;
+        background-color: #f4f4f5;        
     }
 }
 
