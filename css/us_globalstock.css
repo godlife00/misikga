@@ -1535,6 +1535,9 @@ body.globalStock {
     line-height: 22px;
     position: relative;
 }
+.globalStock #container .summary p {
+    min-height: 86px;
+}
 
 .globalStock #container .summary.big {}
 
@@ -1552,7 +1555,7 @@ body.globalStock {
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    word-wrap: break-word;
+    word-wrap: break-word;    
 }
 
 .globalStock #container .summary p {
@@ -3756,6 +3759,8 @@ body.globalStock {
 }
 
 .adsbygoogle_banner {
+    clear: both;
+    float: none;
     position: relative;    
     display: none;
     border-radius: 10px;
@@ -3767,6 +3772,7 @@ body.globalStock {
     max-width: 970px;
     width: 100%;
     height: 78px;
+    margin: 0;
     
 }
 
@@ -3779,6 +3785,7 @@ body.globalStock {
         background-color: #f4f4f5;        
         display: block;              
         margin-top: 15px;  
+        max-height: 180px;
     }
     .adsbygoogle_banner.v_mobile.btmCenter {                
         background-color: #f4f4f5;        
