@@ -801,3 +801,7 @@ box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
   .globalStock #container .schChartArea .invest_charm_b dl:nth-child(2) dd.lock span,
   .globalStock #container .schChartArea .invest_charm_b dl:nth-child(2) dd.lock span img {width:96%;}
 }
+
+.adsbygoogle {
+  background-color: blanchedalmond;
+}
