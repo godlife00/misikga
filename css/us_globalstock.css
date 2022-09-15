@@ -3772,8 +3772,10 @@ body.globalStock {
     max-width: 970px;
     width: 100%;
     height: 78px;
-    margin: 0;
-    
+    margin: 0;    
+}
+.adsbygoogle_banner.v_pc.topRight .adsbygoogle {               
+    height: 78px !important;        
 }
 
 @media (min-width:320px) and (max-width:767px){
