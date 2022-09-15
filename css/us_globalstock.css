@@ -3773,25 +3773,19 @@ body.globalStock {
     max-width: 970px;
     width: 100%;
     height: 78px;
-    margin-top: 15px;    
-}
-.adsbygoogle_banner.v_pc.topRight .adsbygoogle {               
-    height: 78px;        
 }
 
 @media (min-width:320px) and (max-width:767px){
-    .adsbygoogle_banner.v_mobile.topCenter {                
-        background-color: #f4f4f5;        
+    .adsbygoogle_banner.v_mobile.topCenter {   
+        margin-top: 15px;    
         display: block;                
     }
-    .adsbygoogle_banner.v_mobile.midCenter {                
-        background-color: #f4f4f5;        
+    .adsbygoogle_banner.v_mobile.midCenter {   
         display: block;              
         margin-top: 15px;  
         max-height: 180px;
     }
-    .adsbygoogle_banner.v_mobile.btmCenter {                
-        background-color: #f4f4f5;        
+    .adsbygoogle_banner.v_mobile.btmCenter {    
         display: block;              
         margin-top: 15px;  
         max-height: 180px;
@@ -3800,21 +3794,19 @@ body.globalStock {
 @media (min-width:768px) and (max-width:1023px) {
     .adsbygoogle_banner.v_pc.topRight {                
         display: inline-block;
-        /* position: absolute;        
+        position: absolute;        
         right: 0;
-        top: 0; */
-        float: right;
+        top: 0;        
         max-width: 320px;
         width: 100%;
         height: 87px;
-        background-color: #f4f4f5;        
+        
     }
     .adsbygoogle_banner.v_pc.midLeft {                
         display: inline-block;        
         max-width: 320px;
         width: 100%;
-        height: 90px;
-        background-color: #f4f4f5;        
+        height: 90px; 
     }
     .adsbygoogle_banner.v_pc.midCenter {                
         display: block;        
@@ -3822,52 +3814,45 @@ body.globalStock {
         margin-top: 15px;
         width: 100%;
         height: 90px;
-        background-color: #f4f4f5;        
     }
     .adsbygoogle_banner.v_pc.btmCenter {                
         display: block;        
         /* max-width: 320px; */
         margin-top: 15px;
         width: 100%;
-        height: 280px;
-        background-color: #f4f4f5;        
+        height: 280px;    
     }
     
 }
 @media (min-width:1024px) {
     .adsbygoogle_banner.v_pc.topRight {                
         display: inline-block;
-        /* position: absolute;        
+        position: absolute;        
         right: 0;
-        top: 0; */
-        float: right;
+        top: 0;        
         max-width: 520px;
         width: 100%;
-        height: 87px;
-        background-color: #f4f4f5;        
+        height: 87px;    
     }
     .adsbygoogle_banner.v_pc.midLeft {                
         display: inline-block;        
         max-width: 520px;
         width: 100%;
-        height: 90px;        
-        background-color: #f4f4f5;        
+        height: 90px;         
     }
     .adsbygoogle_banner.v_pc.midCenter {                
         display: block;        
         /* max-width: 320px; */
         width: 100%;
         height: 90px;
-        margin-top: 15px;
-        background-color: #f4f4f5;        
+        margin-top: 15px;  
     }
     .adsbygoogle_banner.v_pc.btmCenter {                
         display: block;        
         /* max-width: 320px; */
         margin-top: 15px;
         width: 100%;
-        height: 280px;
-        background-color: #f4f4f5;        
+        height: 280px;  
     }
 }
 
