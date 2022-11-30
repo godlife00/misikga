@@ -44,7 +44,8 @@
     <!-- js -->
     <script src="../js/globalstock.js"></script>
     <!-- 구글 애드센스 광고 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6864430327621783" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6864430327621783"
+        crossorigin="anonymous"></script>
 </head>
 
 <body class="globalStock">
@@ -162,7 +163,7 @@
                 </ul>
 
                 <div class="adsbygoogle_banner v_mobile topCenter">
-                    <!-- 디스플레이(수평_new) -->                    
+                    <!-- 디스플레이(수평_new) -->
                     <ins class="adsbygoogle" style="display: block; min-width: auto; max-width: auto; width: 100%;"
                         data-ad-client="ca-pub-6864430327621783" data-ad-slot="2822453355"></ins>
                     <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
@@ -253,8 +254,8 @@
                     <div class="adsbygoogle_banner v_pc midLeft">
                         <!-- 디스플레이(수평) -->
                         <ins class="adsbygoogle" style="display: block; min-width: auto; max-width: auto; width: 100%;"
-                        data-ad-client="ca-pub-6864430327621783" data-ad-slot="2822453355"></ins>
-                    <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                            data-ad-client="ca-pub-6864430327621783" data-ad-slot="2822453355"></ins>
+                        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
                     </div>
 
                 </div>
@@ -264,16 +265,903 @@
                 <div class="chartSection chartSection_pc">
                     <div class="chartTabsArea">
                         <div class="chartTabs">
-                            <span>5일</span>
-                            <span>1개월</span>
-                            <span class="active">6개월</span>
-                            <span>1년</span>
+                            <span onclick="changeChart(5)" class="active_fix">5일</span>
+                            <span onclick="changeChart(20)" class="active_fix">1개월</span>
+                            <span class="active_fix active" onclick="changeChart(120)">6개월</span>
+                            <span onclick="changeChart(240)" class="active_fix">1년</span>
                             <!-- <a href="chart.html" class="sizeCustom"><i></i>크게보기</a> -->
                         </div>
                     </div>
-                    <!-- //chartTabsArea -->
+                    <!-- //chartTabsArea -->                    
                     <!-- 차트영역입니다 -->
                     <div id="sum_topchart" class="containerLine_1"></div>
+
+                    <script>
+                        var sep_list = [];
+                        var sep_date = [];
+                        var sep_year = [];
+                        sep_list.push(['22.09/27', 252.52]);
+                        sep_date.push(['22.09/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/26', 253.16]);
+                        sep_date.push(['22.09/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/23', 257.36]);
+                        sep_date.push(['22.09/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/22', 264.48]);
+                        sep_date.push(['22.09/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/21', 269.87]);
+                        sep_date.push(['22.09/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/20', 275.14]);
+                        sep_date.push(['22.09/20']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/19', 278.14]);
+                        sep_date.push(['22.09/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/16', 272.26]);
+                        sep_date.push(['22.09/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/15', 277.35]);
+                        sep_date.push(['22.09/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/14', 277.96]);
+                        sep_date.push(['22.09/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/13', 277.72]);
+                        sep_date.push(['22.09/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/12', 289.24]);
+                        sep_date.push(['22.09/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/09', 286.61]);
+                        sep_date.push(['22.09/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/08', 282.34]);
+                        sep_date.push(['22.09/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/07', 276.86]);
+                        sep_date.push(['22.09/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/06', 268.49]);
+                        sep_date.push(['22.09/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/02', 268.42]);
+                        sep_date.push(['22.09/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.09/01', 269.18]);
+                        sep_date.push(['22.09/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/31', 268.01]);
+                        sep_date.push(['22.08/31']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/30', 268.42]);
+                        sep_date.push(['22.08/30']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/29', 271.14]);
+                        sep_date.push(['22.08/29']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/26', 274.84]);
+                        sep_date.push(['22.08/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/25', 283.65]);
+                        sep_date.push(['22.08/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/24', 277.74]);
+                        sep_date.push(['22.08/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/23', 277.34]);
+                        sep_date.push(['22.08/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/22', 276.99]);
+                        sep_date.push(['22.08/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/19', 284.74]);
+                        sep_date.push(['22.08/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/18', 291.83]);
+                        sep_date.push(['22.08/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/17', 288.15]);
+                        sep_date.push(['22.08/17']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/16', 289.06]);
+                        sep_date.push(['22.08/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/15', 286.34]);
+                        sep_date.push(['22.08/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/12', 289.17]);
+                        sep_date.push(['22.08/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/11', 283.32]);
+                        sep_date.push(['22.08/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/10', 280.9]);
+                        sep_date.push(['22.08/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/09', 271.37]);
+                        sep_date.push(['22.08/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/08', 270.17]);
+                        sep_date.push(['22.08/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/05', 269.06]);
+                        sep_date.push(['22.08/05']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/04', 269.229]);
+                        sep_date.push(['22.08/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/03', 268.811]);
+                        sep_date.push(['22.08/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/02', 262.889]);
+                        sep_date.push(['22.08/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.08/01', 265.327]);
+                        sep_date.push(['22.08/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/29', 268.672]);
+                        sep_date.push(['22.07/29']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/28', 261.376]);
+                        sep_date.push(['22.07/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/27', 255.334]);
+                        sep_date.push(['22.07/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/26', 240.463]);
+                        sep_date.push(['22.07/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/25', 244.902]);
+                        sep_date.push(['22.07/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/22', 243.927]);
+                        sep_date.push(['22.07/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/21', 244.205]);
+                        sep_date.push(['22.07/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/20', 240.911]);
+                        sep_date.push(['22.07/20']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/19', 236.979]);
+                        sep_date.push(['22.07/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/18', 229.116]);
+                        sep_date.push(['22.07/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/15', 229.265]);
+                        sep_date.push(['22.07/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/14', 222.088]);
+                        sep_date.push(['22.07/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/13', 226.976]);
+                        sep_date.push(['22.07/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/12', 230.579]);
+                        sep_date.push(['22.07/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/11', 230.33]);
+                        sep_date.push(['22.07/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/08', 235.436]);
+                        sep_date.push(['22.07/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/07', 237.168]);
+                        sep_date.push(['22.07/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/06', 232.49]);
+                        sep_date.push(['22.07/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/05', 234.222]);
+                        sep_date.push(['22.07/05']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.07/01', 236.87]);
+                        sep_date.push(['22.07/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/30', 236.581]);
+                        sep_date.push(['22.06/30']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/29', 238.89]);
+                        sep_date.push(['22.06/29']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/28', 242.633]);
+                        sep_date.push(['22.06/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/27', 246.087]);
+                        sep_date.push(['22.06/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/24', 248.137]);
+                        sep_date.push(['22.06/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/23', 238.452]);
+                        sep_date.push(['22.06/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/22', 239.995]);
+                        sep_date.push(['22.06/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/21', 241.478]);
+                        sep_date.push(['22.06/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/17', 234.013]);
+                        sep_date.push(['22.06/17']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/16', 234.511]);
+                        sep_date.push(['22.06/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/15', 245.34]);
+                        sep_date.push(['22.06/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/14', 241.946]);
+                        sep_date.push(['22.06/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/13', 239.288]);
+                        sep_date.push(['22.06/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/10', 250.417]);
+                        sep_date.push(['22.06/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/09', 264.471]);
+                        sep_date.push(['22.06/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/08', 270.901]);
+                        sep_date.push(['22.06/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/07', 275.779]);
+                        sep_date.push(['22.06/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/06', 273.012]);
+                        sep_date.push(['22.06/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/03', 270.095]);
+                        sep_date.push(['22.06/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/02', 274.335]);
+                        sep_date.push(['22.06/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.06/01', 269.189]);
+                        sep_date.push(['22.06/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/31', 274.992]);
+                        sep_date.push(['22.05/31']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/27', 277.202]);
+                        sep_date.push(['22.05/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/26', 273.061]);
+                        sep_date.push(['22.05/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/25', 264.023]);
+                        sep_date.push(['22.05/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/24', 259.425]);
+                        sep_date.push(['22.05/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/23', 261.824]);
+                        sep_date.push(['22.05/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/20', 254.826]);
+                        sep_date.push(['22.05/20']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/19', 252.746]);
+                        sep_date.push(['22.05/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/18', 258.718]);
+                        sep_date.push(['22.05/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/17', 267.806]);
+                        sep_date.push(['22.05/17']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/16', 259.355]);
+                        sep_date.push(['22.05/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/13', 260.4]);
+                        sep_date.push(['22.05/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/12', 249.809]);
+                        sep_date.push(['22.05/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/11', 255.224]);
+                        sep_date.push(['22.05/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/10', 258.19]);
+                        sep_date.push(['22.05/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/09', 258.439]);
+                        sep_date.push(['22.05/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/06', 265.367]);
+                        sep_date.push(['22.05/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/05', 268.191]);
+                        sep_date.push(['22.05/05']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/04', 280.892]);
+                        sep_date.push(['22.05/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/03', 269.568]);
+                        sep_date.push(['22.05/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.05/02', 266.318]);
+                        sep_date.push(['22.05/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/29', 263.029]);
+                        sep_date.push(['22.04/29']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/28', 270.38]);
+                        sep_date.push(['22.04/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/27', 263.742]);
+                        sep_date.push(['22.04/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/26', 262.098]);
+                        sep_date.push(['22.04/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/25', 278.356]);
+                        sep_date.push(['22.04/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/22', 277.484]);
+                        sep_date.push(['22.04/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/21', 289.006]);
+                        sep_date.push(['22.04/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/20', 298.051]);
+                        sep_date.push(['22.04/20']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/19', 294.871]);
+                        sep_date.push(['22.04/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/18', 287.708]);
+                        sep_date.push(['22.04/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/14', 288.035]);
+                        sep_date.push(['22.04/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/13', 290.026]);
+                        sep_date.push(['22.04/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/12', 285.271]);
+                        sep_date.push(['22.04/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/11', 288.065]);
+                        sep_date.push(['22.04/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/08', 290.324]);
+                        sep_date.push(['22.04/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/07', 286.618]);
+                        sep_date.push(['22.04/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/06', 289.551]);
+                        sep_date.push(['22.04/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/05', 295.773]);
+                        sep_date.push(['22.04/05']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/04', 294.772]);
+                        sep_date.push(['22.04/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.04/01', 294.653]);
+                        sep_date.push(['22.04/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/31', 297.576]);
+                        sep_date.push(['22.03/31']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/30', 307.721]);
+                        sep_date.push(['22.03/30']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/29', 309.326]);
+                        sep_date.push(['22.03/29']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/28', 308.216]);
+                        sep_date.push(['22.03/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/25', 311.714]);
+                        sep_date.push(['22.03/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/24', 308.831]);
+                        sep_date.push(['22.03/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/23', 300.35]);
+                        sep_date.push(['22.03/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/22', 304.63]);
+                        sep_date.push(['22.03/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/21', 296.08]);
+                        sep_date.push(['22.03/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/18', 298.032]);
+                        sep_date.push(['22.03/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/17', 297.12]);
+                        sep_date.push(['22.03/17']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/16', 291.74]);
+                        sep_date.push(['22.03/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/15', 276.998]);
+                        sep_date.push(['22.03/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/14', 271.064]);
+                        sep_date.push(['22.03/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/11', 269.35]);
+                        sep_date.push(['22.03/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/10', 270.014]);
+                        sep_date.push(['22.03/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/09', 271.975]);
+                        sep_date.push(['22.03/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/08', 258.967]);
+                        sep_date.push(['22.03/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/07', 262.464]);
+                        sep_date.push(['22.03/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/04', 278.881]);
+                        sep_date.push(['22.03/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/03', 287.708]);
+                        sep_date.push(['22.03/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/02', 287.213]);
+                        sep_date.push(['22.03/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.03/01', 276.483]);
+                        sep_date.push(['22.03/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/28', 297.011]);
+                        sep_date.push(['22.02/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/25', 299.963]);
+                        sep_date.push(['22.02/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/24', 286.678]);
+                        sep_date.push(['22.02/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/23', 288.857]);
+                        sep_date.push(['22.02/23']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/22', 294.643]);
+                        sep_date.push(['22.02/22']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/18', 297.774]);
+                        sep_date.push(['22.02/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/17', 296.625]);
+                        sep_date.push(['22.02/17']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/16', 309.217]);
+                        sep_date.push(['22.02/16']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/15', 305.63]);
+                        sep_date.push(['22.02/15']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/14', 298.16]);
+                        sep_date.push(['22.02/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/11', 301.182]);
+                        sep_date.push(['22.02/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/10', 312.972]);
+                        sep_date.push(['22.02/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/09', 315.074]);
+                        sep_date.push(['22.02/09']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/08', 311.284]);
+                        sep_date.push(['22.02/08']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/07', 307.917]);
+                        sep_date.push(['22.02/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/04', 304.156]);
+                        sep_date.push(['22.02/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/03', 300.355]);
+                        sep_date.push(['22.02/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/02', 309.201]);
+                        sep_date.push(['22.02/02']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.02/01', 304.156]);
+                        sep_date.push(['22.02/01']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/31', 300.415]);
+                        sep_date.push(['22.01/31']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/28', 294.274]);
+                        sep_date.push(['22.01/28']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/27', 299.822]);
+                        sep_date.push(['22.01/27']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/26', 294.965]);
+                        sep_date.push(['22.01/26']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/25', 294.709]);
+                        sep_date.push(['22.01/25']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/24', 297.107]);
+                        sep_date.push(['22.01/24']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/21', 295.548]);
+                        sep_date.push(['22.01/21']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/20', 305.439]);
+                        sep_date.push(['22.01/20']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/19', 307.838]);
+                        sep_date.push(['22.01/19']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/18', 315.114]);
+                        sep_date.push(['22.01/18']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/14', 324.374]);
+                        sep_date.push(['22.01/14']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/13', 323.13]);
+                        sep_date.push(['22.01/13']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/12', 323.999]);
+                        sep_date.push(['22.01/12']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/11', 321.857]);
+                        sep_date.push(['22.01/11']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/10', 314.571]);
+                        sep_date.push(['22.01/10']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/07', 315.242]);
+                        sep_date.push(['22.01/07']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/06', 315.114]);
+                        sep_date.push(['22.01/06']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/05', 310.909]);
+                        sep_date.push(['22.01/05']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/04', 314.008]);
+                        sep_date.push(['22.01/04']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['22.01/03', 300.365]);
+                        sep_date.push(['22.01/03']);
+                        sep_year.push(['2022']);
+                        sep_list.push(['21.12/31', 297.799]);
+                        sep_date.push(['21.12/31']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/30', 298.105]);
+                        sep_date.push(['21.12/30']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/29', 301.501]);
+                        sep_date.push(['21.12/29']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/28', 301.757]);
+                        sep_date.push(['21.12/28']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/27', 303.455]);
+                        sep_date.push(['21.12/27']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/23', 298.411]);
+                        sep_date.push(['21.12/23']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/22', 294.867]);
+                        sep_date.push(['21.12/22']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/21', 290.73]);
+                        sep_date.push(['21.12/21']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/20', 280.187]);
+                        sep_date.push(['21.12/20']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/17', 290.858]);
+                        sep_date.push(['21.12/17']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/16', 296.387]);
+                        sep_date.push(['21.12/16']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/15', 294.422]);
+                        sep_date.push(['21.12/15']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/14', 288.499]);
+                        sep_date.push(['21.12/14']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/13', 289.091]);
+                        sep_date.push(['21.12/13']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/10', 293.998]);
+                        sep_date.push(['21.12/10']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/09', 293.544]);
+                        sep_date.push(['21.12/09']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/08', 296.732]);
+                        sep_date.push(['21.12/08']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/07', 297.72]);
+                        sep_date.push(['21.12/07']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/06', 289.881]);
+                        sep_date.push(['21.12/06']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/03', 286.485]);
+                        sep_date.push(['21.12/03']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/02', 291.994]);
+                        sep_date.push(['21.12/02']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.12/01', 281.293]);
+                        sep_date.push(['21.12/01']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/30', 285.893]);
+                        sep_date.push(['21.11/30']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/29', 289.95]);
+                        sep_date.push(['21.11/29']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/26', 288.005]);
+                        sep_date.push(['21.11/26']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/24', 298.588]);
+                        sep_date.push(['21.11/24']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/23', 300.079]);
+                        sep_date.push(['21.11/23']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/22', 297.453]);
+                        sep_date.push(['21.11/22']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/19', 295.716]);
+                        sep_date.push(['21.11/19']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/18', 299.289]);
+                        sep_date.push(['21.11/18']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/17', 298.539]);
+                        sep_date.push(['21.11/17']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/16', 304.729]);
+                        sep_date.push(['21.11/16']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/15', 303.741]);
+                        sep_date.push(['21.11/15']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/12', 304.581]);
+                        sep_date.push(['21.11/12']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/11', 302.192]);
+                        sep_date.push(['21.11/11']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/10', 300.928]);
+                        sep_date.push(['21.11/10']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/09', 301.293]);
+                        sep_date.push(['21.11/09']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/08', 303.001]);
+                        sep_date.push(['21.11/08']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/05', 301.333]);
+                        sep_date.push(['21.11/05']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/04', 301.647]);
+                        sep_date.push(['21.11/04']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/03', 305.139]);
+                        sep_date.push(['21.11/03']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/02', 302.808]);
+                        sep_date.push(['21.11/02']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.11/01', 300.743]);
+                        sep_date.push(['21.11/01']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/29', 297.162]);
+                        sep_date.push(['21.10/29']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/28', 298.539]);
+                        sep_date.push(['21.10/28']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/27', 291.448]);
+                        sep_date.push(['21.10/27']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/26', 292.422]);
+                        sep_date.push(['21.10/26']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/25', 293.1]);
+                        sep_date.push(['21.10/25']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/22', 293.297]);
+                        sep_date.push(['21.10/22']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/21', 291.241]);
+                        sep_date.push(['21.10/21']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/20', 291.851]);
+                        sep_date.push(['21.10/20']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/19', 288.36]);
+                        sep_date.push(['21.10/19']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/18', 284.258]);
+                        sep_date.push(['21.10/18']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/15', 285.104]);
+                        sep_date.push(['21.10/15']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/14', 281.13]);
+                        sep_date.push(['21.10/14']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/13', 273.773]);
+                        sep_date.push(['21.10/13']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/12', 274.895]);
+                        sep_date.push(['21.10/12']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/11', 272.672]);
+                        sep_date.push(['21.10/11']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/08', 274.511]);
+                        sep_date.push(['21.10/08']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/07', 271.806]);
+                        sep_date.push(['21.10/07']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/06', 268.698]);
+                        sep_date.push(['21.10/06']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/05', 268.442]);
+                        sep_date.push(['21.10/05']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/04', 260.535]);
+                        sep_date.push(['21.10/04']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.10/01', 264.115]);
+                        sep_date.push(['21.10/01']);
+                        sep_year.push(['2021']);
+                        sep_list.push(['21.09/30', 259.777]);
+                        sep_date.push(['21.09/30']);
+                        sep_year.push(['2021']);
+                        var mychart = Highcharts.chart('sum_topchart', {
+
+                            chart: {
+                                type: 'area',
+                                renderTo: 'sum_topchart',                
+                                style: {
+                                    fontFamily: "'Lato', 'Noto Sans KR'"
+                                },
+                                // height: 300,                
+                                plotBorderColor: null,
+                                plotBorderWidth: null,
+                                plotShadow: false
+                            },
+                            colors: ["#e1474e", "#ff3301"],
+                            title: {
+                                style: {
+                                    'font-weight': "bold",
+                                    color: '#E0E0E3',
+                                    textTransform: 'uppercase',
+                                    fontSize: '0',
+                                },
+                                text: null
+                            },
+
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}"><b>{point.y:,.2f} 달러</b><br/>'
+                            },
+
+                            //_this : this,
+
+                            xAxis: [{
+                                categories: sep_date.slice(0, 120),
+                                crosshair: true,
+                                labels: {
+                                    enabled: true,
+                                    step: 25,
+                                }
+                            }],
+
+
+                            yAxis: {
+                                title: {
+                                    text: null
+                                },
+                            },
+
+                            credits: {
+                                text: '초이스스탁US',
+                                href: false,
+                                style: {
+                                    fontSize: '12px',
+                                    cursor: 'text',
+                                },
+                            },
+                            exporting: {
+                                buttons: {
+                                    contextButton: {
+                                        menuItems: ["viewFullscreen", "printChart", "downloadPNG", "downloadJPEG"],
+                                    }
+                                },
+                            },
+
+                            legend: {
+                                enabled: false,
+                            },
+
+                            exporting: {
+                                enabled: false
+                            },
+
+                            legend: {
+                                enabled: false
+                            },
+
+                            series: [{
+                                name: '',
+                                data: sep_list.slice(0, 120)
+                            }],
+
+                            plotOptions: {                
+                                area: {
+                                    fillColor: {
+                                        linearGradient: {
+                                            x1: 0,
+                                            y1: 0,
+                                            x2: 0,
+                                            y2: 1
+                                        },
+                                        stops: [
+                                            [0, Highcharts.getOptions().colors[5]],
+                                            [1, Highcharts.color(Highcharts.getOptions().colors[5]).setOpacity(0).get('rgba')]
+                                        ]
+                                    },
+                                },
+                                series: {
+                                    label: {
+                                        connectorAllowed: false
+                                    },
+                                    pointStart: null,
+                                    marker: {
+                                        enabled: false,
+                                    },
+                                    fillOpacity: 0.1
+                                },
+                            },
+                        });
+                    </script>
+                    <script type="text/javascript">
+                        function changeChart(count) {
+                            var list = sep_list.slice(0, count).reverse();
+                            var datelist = sep_date.slice(0, count).reverse();
+                            var yearlist = sep_year.slice(0, count).reverse();
+                            if (count == 240) {
+                                mychart.xAxis[0].update({ labels: { step: 48 } });
+                                mychart.xAxis[0].categories = yearlist;
+                            }
+                            else {
+                                if (count == 5) {
+                                    mychart.xAxis[0].update({ labels: { step: 0 } });
+                                }
+                                else if (count == 20) {
+                                    mychart.xAxis[0].update({ labels: { step: 4 } });
+                                } else {
+                                    mychart.xAxis[0].update({ labels: { step: 25 } });
+                                }
+                                mychart.xAxis[0].categories = datelist;
+                            }
+                            mychart.series[0].setData(list);
+                        }
+                        changeChart(120);
+                    </script>
                 </div>
                 <!-- //차트영역입니다 (pc) -->
 
@@ -309,8 +1197,8 @@
             <div class="adsbygoogle_banner v_pc midCenter">
                 <!-- 디스플레이(수평) -->
                 <ins class="adsbygoogle" style="display: block; min-width: auto; max-width: auto; width: 100%;"
-                data-ad-client="ca-pub-6864430327621783" data-ad-slot="2822453355"></ins>
-            <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                    data-ad-client="ca-pub-6864430327621783" data-ad-slot="2822453355"></ins>
+                <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
             </div>
 
             <!-- 구글 애드센스 중간센터 -->
